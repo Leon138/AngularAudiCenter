@@ -1,0 +1,60 @@
+::ng-deep {
+  body {
+    background-color: rgb(250 250 250);
+  }
+}
+
+.TestDrive__Container {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 50px;
+
+  &__Img {
+    display: flex;
+    justify-content: center;
+    margin-top: 53px;
+
+    img {
+      width: 90%;
+      height: 35vw;
+    }
+  }
+
+  &__Text {
+    margin-left: 75px;
+
+    p {
+      font-size: 22px;
+      word-spacing: 2px;
+      line-height: 30px;
+    }
+  }
+
+  &__Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      width: 350px;
+      height: 40px;
+      margin-bottom: 15px;
+    }
+
+    select {
+      width: 100%;
+      height: 40px;
+      margin-bottom: 15px;
+    }
+
+    &__Button {
+      display: flex;
+      justify-content: center;
+
+      button {
+        width: 150px;
+        height: 35px;
+      }
+    }
+  }
+}

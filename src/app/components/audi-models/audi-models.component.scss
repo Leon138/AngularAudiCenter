@@ -1,0 +1,94 @@
+.ModelsContainer {
+  background-color: #e4e4e4f3;
+
+  img {
+    width: 100%;
+  }
+}
+
+.SpanModels {
+  margin: 0px 30px 30px;
+  padding-top: 50px;
+  font-size: 60px;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+}
+
+.MainBlockModels {
+  margin: 0px 30px;
+
+  &__Audi {
+    margin-bottom: 20px;
+  }
+
+  &__Audi:last-child {
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+  }
+
+  &__Title {
+    font-size: 70px;
+    font-family: "Bebas Neue", sans-serif;
+  }
+
+  &__Wrap {
+    display: flex;
+    justify-content: center;
+
+    &__AudiInfo {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      h3 > span:nth-child(1) {
+        font-size: 22px;
+        font-family: "Oswald", sans-serif;
+        margin-right: 5px;
+      }
+
+      h3 > span:nth-child(2) {
+        font-family: "Exo 2", sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+.shine-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.5s linear;
+}
+
+.shine-button:before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.5)
+  );
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+  transition: 0.5s ease-in-out;
+}
+
+.shine-button:hover {
+  background: #ff0000dc;
+  color: #fff;
+}
+
+.shine-button:hover:before {
+  left: 150px;
+  transition: 0.5s ease-in-out;
+}

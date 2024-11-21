@@ -1,0 +1,16 @@
+<app-header [counter]="counter"></app-header>
+<div class="Item__Container">
+  <div
+    *ngFor="let accumulator of accumulators; let index = index"
+    class="Item__Container__Detail"
+  >
+    <div>
+      <img src="{{ accumulator.img }}" alt="" />
+    </div>
+    <div>{{ accumulator.name }}</div>
+    <div>Цена: {{ accumulator.price | currency : "р" }}</div>
+    <div>Напряжение: {{ accumulator.voltage }}</div>
+    <div>Емкость батареи: {{ accumulator.capacity }}</div>
+    <button (click)="addToCart(index)">В корзину</button>
+  </div>
+</div>

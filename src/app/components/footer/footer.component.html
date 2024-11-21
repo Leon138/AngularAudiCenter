@@ -1,0 +1,26 @@
+<div class="Footer">
+  <div>
+    <h2>Модели</h2>
+    <p *ngFor="let model of arrModel">{{ model }}</p>
+  </div>
+  <div>
+    <h2>Официальный сервис</h2>
+    <p routerLink="/repair">Сервис Audi</p>
+    <p routerLink="/auto-parts">Запчасти</p>
+    <p>Диагностика и тех. обслуживание</p>
+    <p>Шинный сервис</p>
+    <p>Ремонт подвески</p>
+    <p>Ремонт двигателя</p>
+    <p>Ремонт топливной системы</p>
+  </div>
+  <div>
+    <h2>Аккаунты в соц. сетях</h2>
+    <div *ngFor="let social of socialMedia" class="SocialMedia">
+      <a href="{{ social.link }}" target="_blank">
+        <img src="{{ social.img }}" alt="" />
+        <p>{{ social.name }}</p>
+      </a>
+      <div class="Line"></div>
+    </div>
+  </div>
+</div>

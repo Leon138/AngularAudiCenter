@@ -1,0 +1,284 @@
+<app-header [counter]="counter"></app-header>
+<div class="ImgHeader">
+  <img src="../../../assets/img/parts.jpeg" alt="parts" />
+</div>
+<div class="AutoParts__Container">
+  <div
+    *ngFor="let parts of autoparts; let index = index"
+    class="AutoParts__Container__PartsName"
+  >
+    <div
+      (click)="toggleDiv(index)"
+      class="AutoParts__Container__PartsName__ImgName"
+    >
+      <div class="AutoParts__Container__PartsName__Img">
+        <img src="{{ parts.img }}" />
+      </div>
+      <div class="AutoParts__Container__PartsName__Name">{{ parts.name }}</div>
+    </div>
+    <ng-container *ngIf="parts.visible">
+      <div *ngIf="index == 0">
+        <div
+          *ngFor="let item of rashodnikiandfilters"
+          class="AutoParts__Container__PartsName__Invisible"
+        >
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.rashodniki }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let rashodniki of item.rashodnikielements"
+              [item]="rashodniki"
+              [routerLink]="['./', rashodniki.redirect]"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.filters }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let filters of item.filterselements"
+              [item]="filters"
+              [routerLink]="['./', filters.redirect]"
+            ></app-auto-parts-item>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="parts.visible">
+      <div *ngIf="index == 1">
+        <div
+          *ngFor="let item of brakesystem"
+          class="AutoParts__Container__PartsName__Invisible"
+        >
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.brake }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let brake of item.brakelements"
+              [item]="brake"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.hydraulics }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let hydraulics of item.hydraulicselements"
+              [item]="hydraulics"
+              [routerLink]="['./', hydraulics.redirect]"
+            ></app-auto-parts-item>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="parts.visible">
+      <div *ngIf="index == 2">
+        <div
+          *ngFor="let item of dvigatelandexhaust"
+          class="AutoParts__Container__PartsName__Invisible"
+        >
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.motor_elements }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let motorelements of item.motorelements"
+              [item]="motorelements"
+              [routerLink]="['./', motorelements.redirect]"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.prokladki }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let prokladki of item.prokladkielements"
+              [item]="prokladki"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.remni_cepi }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let remni of item.remnielements"
+              [item]="remni"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.exhaust }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let exhaust of item.exhaustelements"
+              [item]="exhaust"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.fuelsystem }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let fuelelements of item.fuelsystemelements"
+              [item]="fuelelements"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.turbines }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let turbines of item.turbineselements"
+              [item]="turbines"
+            ></app-auto-parts-item>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="parts.visible">
+      <div *ngIf="index == 3">
+        <div
+          *ngFor="let item of podveskacomponents"
+          class="AutoParts__Container__PartsName__Invisible"
+        >
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.podveska }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let podveska of item.podveskaelements"
+              [item]="podveska"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.rulevoe }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let rulevoe of item.rulevoeelements"
+              [item]="rulevoe"
+            ></app-auto-parts-item>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="parts.visible">
+      <div *ngIf="index == 4">
+        <div
+          *ngFor="let item of transmissionparts"
+          class="AutoParts__Container__PartsName__Invisible"
+        >
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.parts }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let parts of item.transmissionelements"
+              [item]="parts"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.sceplenie }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let sceplenie of item.sceplenieelements"
+              [item]="sceplenie"
+            ></app-auto-parts-item>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="parts.visible">
+      <div *ngIf="index == 5">
+        <div
+          *ngFor="let item of airsystem"
+          class="AutoParts__Container__PartsName__Invisible"
+        >
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.cooling }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let parts of item.coolingelements"
+              [item]="parts"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.airsystem }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let airsystem of item.airsystemelements"
+              [item]="airsystem"
+            ></app-auto-parts-item>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="parts.visible">
+      <div *ngIf="index == 6">
+        <div
+          *ngFor="let item of electrica"
+          class="AutoParts__Container__PartsName__Invisible"
+        >
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.lighting }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let parts of item.lightingelements"
+              [item]="parts"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.electrica }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let electrica of item.electricaelements"
+              [item]="electrica"
+            ></app-auto-parts-item>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="parts.visible">
+      <div *ngIf="index == 7">
+        <div
+          *ngFor="let item of bodycomponents"
+          class="AutoParts__Container__PartsName__Invisible"
+        >
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.outerparts }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let parts of item.outerpartselements"
+              [item]="parts"
+            ></app-auto-parts-item>
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Name">
+            {{ item.wipersystem }}
+          </div>
+          <div class="AutoParts__Container__PartsName__Invisible__Details">
+            <app-auto-parts-item
+              *ngFor="let wipersystem of item.wipersystemelements"
+              [item]="wipersystem"
+            ></app-auto-parts-item>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<app-footer></app-footer>

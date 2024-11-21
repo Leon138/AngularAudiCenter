@@ -1,0 +1,50 @@
+.Footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  font-family: "Oswald", sans-serif;
+
+  img {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    background-color: white;
+    border-radius: 18px;
+    border: dotted;
+  }
+
+  p:hover {
+    cursor: pointer;
+    color: red;
+  }
+}
+
+.SocialMedia {
+  a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    cursor: pointer;
+    color: red;
+  }
+}
+
+.SocialMedia:hover::after {
+  width: 75%;
+}
+
+.SocialMedia:after {
+  width: 0%;
+  content: "";
+  position: relative;
+  top: 2px;
+  background-color: red;
+  display: block;
+  height: 1.5px;
+  transition: width 0.4s ease-in-out;
+}

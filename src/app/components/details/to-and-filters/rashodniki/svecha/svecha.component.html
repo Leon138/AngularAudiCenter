@@ -1,0 +1,16 @@
+<app-header [counter]="counter"></app-header>
+<div class="Item__Container">
+  <div
+    *ngFor="let item of svecha; let index = index"
+    class="Item__Container__Detail"
+  >
+    <div>
+      <img src="{{ item.img }}" alt="" />
+    </div>
+    <div>{{ item.name }}</div>
+    <div>Наименование: {{ item.naimenovanie }}</div>
+    <div>Цена: {{ item.price | currency : "р" }}</div>
+    <div>Диаметр: {{ item.diameter + " " + "[мм]" }}</div>
+    <button (click)="addToCart(index)">В корзину</button>
+  </div>
+</div>

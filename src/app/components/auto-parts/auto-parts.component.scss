@@ -1,0 +1,63 @@
+::ng-deep {
+  body {
+    background-color: rgb(250 250 250);
+  }
+}
+
+.ImgHeader {
+  img {
+    width: 100%;
+  }
+}
+
+.AutoParts__Container {
+  font-family: "Oswald", sans-serif;
+  padding: 20px;
+
+  img {
+    max-height: 80px;
+  }
+
+  &__PartsName {
+    margin-bottom: 15px;
+
+    &__ImgName {
+      display: flex;
+      align-items: center;
+      padding: 15px 0px 10px 15px;
+      background-color: white;
+      border-bottom: solid 1px red;
+      box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.05);
+    }
+
+    &__Name {
+      font-size: 25px;
+      margin-left: 20px;
+    }
+
+    &__Invisible {
+      &__Name {
+        font-size: 25px;
+        margin: 20px 0px 20px 10px;
+      }
+
+      &__Details {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+    }
+
+    &__ImgName:hover {
+      cursor: pointer;
+      border-bottom: solid 1px #ffbf33;
+      box-shadow: 0 2px 20px 0 rgb(0 0 0 / 20%);
+      transition: 0.4s;
+      transform: scale(1.01);
+    }
+
+    &__ImgName:not(:hover) {
+      transition: 0.3s;
+    }
+  }
+}

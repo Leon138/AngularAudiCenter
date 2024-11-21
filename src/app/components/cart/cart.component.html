@@ -1,0 +1,146 @@
+<app-header [counter]="counter"></app-header>
+<div class="Cart__Container">
+  <div class="Cart__Container__InfoParts">
+    <h3>Корзина - оформление заказа</h3>
+    <div *ngIf="showMessage()" class="ShowMessageVisible">
+      <h2>В корзине еще нет товаров</h2>
+      <span
+        >Для того что бы видеть товары в Вашей корзине, выберите из нашего
+        <a [routerLink]="['/auto-parts']">каталога автозапчастей</a></span
+      >
+    </div>
+    <div
+      *ngFor="let parts of autoparts; let index = index"
+      class="Cart__Container__Parts"
+    >
+      <div class="Cart__Container__Parts__Item">
+        <img src="{{ parts.img }}" alt="" />
+        <div class="margin-left">
+          <div class="Cart__Container__Parts__Item__Name">{{ parts.name }}</div>
+          <div>{{ parts.naimenovanie }}</div>
+        </div>
+      </div>
+      <div>
+        <div>Цена: {{ parts.price | currency : "р" }}</div>
+        <button (click)="deleteParts(index)">Удалить</button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="hideDiv()" class="Cart__Container__Order">
+    <div>Итого: {{ sum | currency : "р" }}</div>
+    <div class="Cart__Container__Order__Line"></div>
+    <div>Оформить заказ</div>
+  </div>
+</div>
+
+<div *ngIf="hideDiv()" class="Form">
+  <h2>Оформление заказа</h2>
+  <form [formGroup]="myForm">
+    <div class="Form__Fields">
+      <span>Контактное лицо:</span>
+      <input
+        [ngStyle]="{
+          'border-color':
+            myForm.controls['userName'].invalid &&
+            myForm.controls['userName'].touched
+              ? 'red'
+              : '#dcac37db'
+        }"
+        type="text"
+        placeholder="Имя*"
+        formControlName="userName"
+      />
+      <div
+        *ngIf="
+          myForm.controls['userName'].invalid &&
+          myForm.controls['userName'].touched
+        "
+        class="InvalidInput"
+      >
+        Неверное Имя
+      </div>
+    </div>
+
+    <div class="Form__Fields">
+      <span>Номер телефона:</span>
+      <input
+        [ngStyle]="{
+          'border-color':
+            myForm.controls['phoneNumber'].invalid &&
+            myForm.controls['phoneNumber'].touched
+              ? 'red'
+              : '#dcac37db'
+        }"
+        type="tel"
+        class="phone"
+        placeholder="+375"
+        formControlName="phoneNumber"
+      />
+      <div
+        *ngIf="
+          myForm.controls['phoneNumber'].invalid &&
+          myForm.controls['phoneNumber'].touched
+        "
+        class="InvalidInput"
+      >
+        Неверный номер телефона
+      </div>
+    </div>
+    <div class="Form__Fields">
+      <span>Ваш E-mail:</span>
+      <input
+        [ngStyle]="{
+          'border-color':
+            myForm.controls['email'].invalid && myForm.controls['email'].touched
+              ? 'red'
+              : '#dcac37db'
+        }"
+        type="email"
+        placeholder="E-mail*"
+        formControlName="email"
+        name="email"
+      />
+      <div
+        *ngIf="
+          myForm.controls['email'].invalid && myForm.controls['email'].touched
+        "
+        class="InvalidInput"
+      >
+        Неверный E-mail
+      </div>
+    </div>
+    <div class="Form__Fields">
+      <span>Город:</span>
+      <input
+        [ngStyle]="{
+          'border-color':
+            myForm.controls['city'].invalid && myForm.controls['city'].touched
+              ? 'red'
+              : '#dcac37db'
+        }"
+        type="text"
+        name="city"
+        placeholder="Город*"
+        formControlName="city"
+      />
+      <div
+        *ngIf="
+          myForm.controls['city'].invalid && myForm.controls['city'].touched
+        "
+        class="InvalidInput"
+      >
+        Неверный Город
+      </div>
+    </div>
+    <div class="Form__Fields">
+      <span>Адрес доставки:</span>
+      <input
+        type="text"
+        name="address"
+        placeholder="Адрес доставки"
+        formControlName="deliveryAddress"
+      />
+    </div>
+  </form>
+  <button [disabled]="myForm.invalid" (click)="onSubmit()">Заказать</button>
+</div>

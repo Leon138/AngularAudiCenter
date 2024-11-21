@@ -1,0 +1,86 @@
+<app-header [counter]="counter"></app-header>
+<div class="TestDrive__Container">
+  <div class="TestDrive__Container__Img">
+    <img src="../../../assets/img/Test_drive.jpg" alt="" />
+  </div>
+  <div class="TestDrive__Container__Text">
+    <h2>Запись на тест-драйв</h2>
+    <p>
+      С помощью данной формы Вы можете отправить заявку на тест-драйв автомобиля
+      Audi, указав желаемую модель.<br />
+      После заполнения и отправки формы, с Вами свяжется сотрудник автосалона
+      Audi.
+    </p>
+  </div>
+  <div class="TestDrive__Container__Form">
+    <h2>Персональная информация</h2>
+    <form>
+      <div>
+        <input
+          type="text"
+          class="input_select"
+          required
+          autocomplete="off"
+          placeholder="Имя"
+        />
+      </div>
+      <div>
+        <input
+          type="tel"
+          class="phone input_select"
+          required
+          placeholder="Телефон"
+          autocomplete="off"
+        />
+      </div>
+      <div>
+        <input
+          type="text"
+          class="input_select"
+          required
+          autocomplete="off"
+          placeholder="E-mail"
+        />
+      </div>
+      <div>
+        <select class="input_select" required>
+          <option>Выберите дилера</option>
+          <option value="Audi Центр Минск">Audi Центр Минск</option>
+          <option value="Audi Центр Гомель">Audi Центр Гомель</option>
+        </select>
+      </div>
+      <div>
+        <input
+          type="date"
+          class="input_select"
+          required
+          min="2021-01-01"
+          max="2022-12-31"
+          placeholder="Укажите дату"
+        />
+      </div>
+      <div>
+        <select class="input_select" required>
+          <option>Модель автомобиля</option>
+          <option value="A3">A3</option>
+          <option value="A4">A4</option>
+          <option value="A5">A5</option>
+          <option value="A6">A6</option>
+          <option value="A7">A7</option>
+          <option value="A8">A8</option>
+          <option value="Q3">Q3</option>
+          <option value="Q5">Q5</option>
+          <option value="Q7">Q7</option>
+          <option value="Q8">Q8</option>
+          <option value="RS3">RS3</option>
+          <option value="RS5">RS5</option>
+          <option value="RS7">RS7</option>
+        </select>
+      </div>
+      <div class="TestDrive__Container__Form__Button">
+        <button type="submit">Отправить</button>
+      </div>
+    </form>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,58 @@
+<div class="Header" [class.out]="scroll">
+  <div class="Header__Line"></div>
+  <div [routerLink]="['']" class="Header__Logo">
+    <!-- <a href="#top"></a> -->
+    <img src="../../../assets/img/logo/19.png" alt="Audi" />
+  </div>
+  <div [routerLink]="['/cart']" class="Header__Cart">
+    <div class="Header__Cart__Img">
+      <span class="material-symbols-outlined">shopping_cart </span>
+      <span class="Header__Cart__Counter">{{ counter }}</span>
+    </div>
+    <div class="Header__Cart__Name">Корзина</div>
+  </div>
+  <div class="Header__Line"></div>
+</div>
+
+<div class="hamburger-menu">
+  <input id="menu__toggle" type="checkbox" />
+  <label class="menu__btn" for="menu__toggle">
+    <span></span>
+    <div class="header_burger_text">Меню</div>
+  </label>
+  <ul class="menu__box">
+    <li><a class="menu__item" [routerLink]="['']">Главная</a></li>
+    <li><a class="menu__item" [routerLink]="['/models']">Модельный ряд</a></li>
+    <li>
+      <a class="menu__item" [routerLink]="['/test-drive']"
+        >Запись на тест-драйв</a
+      >
+    </li>
+    <li><a class="menu__item">Дилеры</a></li>
+    <li>
+      <a class="menu__item" [routerLink]="['/auto-parts']">Автозапчасти</a>
+    </li>
+    <!-- <li>
+      <a
+        class="menu__item"
+        href="https://www.drive2.ru/communities/4234/"
+        target="_blank"
+        >Audi Club Belarus</a
+      >
+    </li> -->
+    <li>
+      <a class="menu__item" [routerLink]="['/repair']"
+        >Ремонт и обслуживание Audi</a
+      >
+    </li>
+    <li>
+      <a
+        class="menu__item"
+        href="https://www.drive2.ru/experience/audi/"
+        target="_blank"
+        >Drive2</a
+      >
+    </li>
+    <li><a class="menu__item" href="#openModal">Обратный звонок</a></li>
+  </ul>
+</div>

@@ -1,0 +1,148 @@
+#detach-button-host {
+  display: none !important;
+}
+
+.HomePage__Container {
+  &__AudiCenter {
+    font-family: "Oswald", sans-serif;
+
+    &__Minsk {
+      display: flex;
+      background-color: #e4e4e463;
+
+      &__Img {
+        width: 53%;
+
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &__Info {
+        width: 47%;
+        padding: 10px 20px 10px 20px;
+
+        > div:nth-child(1) {
+          text-align: center;
+          margin-top: 10px;
+
+          > span:nth-child(1) {
+            color: red;
+            font-weight: bold;
+            margin-right: 7px;
+            font-family: "Montserrat", sans-serif;
+          }
+        }
+
+        > div:nth-child(2) {
+          padding: 10px 20px 10px 20px;
+        }
+      }
+    }
+
+    &__Gomel {
+      display: flex;
+      background-color: #e4e4e463;
+
+      &__Info {
+        width: 53%;
+        padding: 10px 20px 10px 20px;
+      }
+
+      &__Img {
+        width: 49%;
+
+        > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &__InstrumentsAndServices {
+    margin-bottom: 15px;
+    font-family: "Oswald", sans-serif;
+
+    h1 {
+      text-align: center;
+    }
+
+    &__Info {
+      display: flex;
+
+      .margin-left {
+        margin-left: 5px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.video {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  object-fit: cover;
+}
+
+.shine-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.5s linear;
+}
+
+.shine-button:before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.5)
+  );
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+  transition: 0.5s ease-in-out;
+}
+
+.shine-button:hover {
+  background: #ff0000dc;
+  color: #fff;
+}
+
+.shine-button:hover:before {
+  left: 150px;
+  transition: 0.5s ease-in-out;
+}
+
+.NameCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+
+  h2:nth-child(1) {
+    color: red;
+    margin-right: 5px;
+  }
+
+  span:nth-child(1) {
+    color: red;
+    margin-right: 5px;
+  }
+}

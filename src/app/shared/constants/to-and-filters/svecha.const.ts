@@ -1,0 +1,61 @@
+export const SVECHA = [
+  {
+    name: 'NGK 3588',
+    naimenovanie: 'Свеча зажигания',
+    img: '../../../assets/img/details/svecha/NGK_3588.jpg',
+    price: 35,
+  },
+  {
+    name: 'NGK 5584',
+    naimenovanie: 'Свеча зажигания',
+    img: '../../../assets/img/details/svecha/NGK_5584.jpg',
+    price: 12.79,
+  },
+  {
+    name: 'NGK 5776',
+    naimenovanie: 'Свеча зажигания',
+    img: '../../../assets/img/details/svecha/NGK_5776.jpg',
+    price: 11.69,
+  },
+  {
+    name: 'DENSO FK20HR11',
+    naimenovanie: 'Свеча зажигания',
+    img: '../../../assets/img/details/svecha/DENSO_FK20HR11.jpg',
+    price: 55.67,
+    diameter: 14,
+  },
+  {
+    name: 'DENSO IKH16TT',
+    naimenovanie: 'Свеча зажигания',
+    img: '../../../assets/img/details/svecha/DENSO_IKH16TT.jpg',
+    price: 39.71,
+    diameter: 14,
+  },
+  {
+    name: 'DENSO K16PR-U11',
+    naimenovanie: 'Свеча зажигания',
+    img: '../../../assets/img/details/svecha/DENSO_K16PR.jpg',
+    price: 6.99,
+    diameter: 14,
+  },
+  {
+    name: 'DENSO K16TT',
+    naimenovanie: 'Свеча зажигания',
+    img: '../../../assets/img/details/svecha/DENSO_K16TT.jpg',
+    price: 9,
+    diameter: 14,
+  },
+  {
+    name: 'DENSO KH16TT',
+    naimenovanie: 'Свеча зажигания',
+    img: '../../../assets/img/details/svecha/DENSO_KH16TT.jpg',
+    price: 9.32,
+    diameter: 14,
+  },
+  {
+    name: 'FEBI BILSTEIN 13518',
+    naimenovanie: 'Свеча зажигания',
+    img: '../../../assets/img/details/svecha/FEBI_13518.jpg',
+    price: 10.05,
+  },
+];

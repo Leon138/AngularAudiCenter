@@ -1,0 +1,138 @@
+.Cart__Container {
+  display: flex;
+  margin-top: 160px;
+  font-family: "Oswald", sans-serif;
+
+  img {
+    width: 120px;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  a:hover {
+    color: red;
+  }
+
+  button {
+    width: 100%;
+    height: 30px;
+    color: white;
+    background-color: #35c866bd;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  &__InfoParts {
+    width: 80%;
+  }
+
+  &__Parts {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 18px;
+    align-items: center;
+    border: 1px solid;
+    margin: 0 50px;
+    margin-bottom: 15px;
+
+    &__Item {
+      display: flex;
+      align-items: center;
+
+      &__Name {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__Order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    background-color: #c8c835bd;
+    width: 15%;
+    height: 102px;
+    margin-top: 67px;
+    border-radius: 10px;
+    margin-right: 50px;
+    font-size: 20px;
+
+    &__Line {
+      width: 90%;
+      border: 1px solid;
+      margin: 7px 0px 7px 0px;
+    }
+  }
+
+  &__Order:hover {
+    background-color: red;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s;
+  }
+
+  &__Order:not(:hover) {
+    transition: 0.4s;
+  }
+}
+
+.margin-left {
+  margin-left: 20px;
+}
+
+.ShowMessageVisible {
+  margin: 30px 0px 0px 50px;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 100px;
+
+  &__Fields {
+    margin-bottom: 20px;
+    text-align: right;
+  }
+
+  span {
+    font-size: 20px;
+  }
+
+  input {
+    width: 360px;
+    height: 36px;
+    padding-left: 10px;
+    margin-left: 25px;
+    font-size: 17px;
+    border: 2px solid #dcac37db;
+  }
+
+  input:focus {
+    outline: none;
+    border: 2px solid #dcac37db;
+    // box-shadow: 0px 0px 2px 2px rgba(247, 25, 4, 0.93);
+  }
+
+  button {
+    font-size: 20px;
+    width: 190px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.InvalidInput {
+  color: red;
+}

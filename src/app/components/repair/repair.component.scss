@@ -1,0 +1,94 @@
+.RepairContainer {
+  img {
+    width: 100%;
+  }
+
+  button {
+    width: 280px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgb(0, 30, 80);
+    border: none;
+    color: white;
+    font-size: 18px;
+  }
+
+  button:hover {
+    background-color: rgb(78, 78, 238);
+    transition: 0.4s;
+    cursor: pointer;
+  }
+
+  button:last-child {
+    margin-top: 20px;
+  }
+}
+
+.RepairWrapper__RightImg {
+  margin: 0px 60px 60px 60px;
+
+  &__TO {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__Info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 47%;
+
+      > p {
+        font-size: 17px;
+        line-height: 1.35;
+        font-family: "Play", sans-serif;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.RepairWrapper__LeftImg {
+  background-color: rgb(243, 245, 246);
+
+  &__Margin {
+    margin: 0px 60px 30px 60px;
+  }
+
+  &__TO {
+    display: flex;
+    justify-content: space-between;
+
+    &__Info {
+      width: 45%;
+
+      > p {
+        font-size: 17px;
+        line-height: 1.35;
+        font-family: "Play", sans-serif;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+    }
+
+    &__Info > button:last-child {
+      margin-left: 20px;
+    }
+  }
+}
+
+.Headline > h3 {
+  font-size: 45px;
+  font-family: "Play", sans-serif;
+}
+
+.HeadlineLeftImg {
+  padding-top: 15px;
+  margin-bottom: 70px;
+}
+
+.Img {
+  width: 40%;
+}
